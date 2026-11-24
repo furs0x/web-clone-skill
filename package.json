@@ -1,0 +1,17 @@
+{
+  "name": "web-clone-skill",
+  "version": "0.1.0",
+  "description": "Playwright-based toolkit for capturing, rebuilding and measuring website layouts.",
+  "type": "module",
+  "license": "MIT",
+  "author": "furs0x",
+  "scripts": {
+    "capture": "node tools/capture.mjs https://example.com ./out/capture --full",
+    "probe": "node tools/probe.mjs https://example.com ./examples/probe.example.json ./out/probe.json",
+    "diff": "node tools/diff.mjs ./out/probe-original.json ./out/probe-clone.json --threshold 2",
+    "assets": "node tools/assets.mjs ./out/capture/assets.json ./out/assets"
+  },
+  "dependencies": {
+    "playwright": "1.65.0"
+  }
+}
